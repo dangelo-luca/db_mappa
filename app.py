@@ -265,4 +265,4 @@ def upload_image():
     return jsonify({'success': False, 'message': 'Tipo file non consentito'}), 400
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=4200)
