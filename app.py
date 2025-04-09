@@ -13,13 +13,12 @@ UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-CORS(app, resources={r"/*": {"origins": "https://4200-dangeloluca-provamappa-03tvdzd4899.ws-eu118.gitpod.io"}})
 
 # Crea la cartella se non esiste
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-CORS(app, resources={r"/*": {"origins": "*"}})  # Consenti tutte le origini
+CORS(app)  # Consenti tutte le origini
 
 # Configurazione del database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///events.db'
